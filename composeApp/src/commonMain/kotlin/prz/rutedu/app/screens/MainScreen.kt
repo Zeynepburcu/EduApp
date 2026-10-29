@@ -84,24 +84,15 @@ fun MainScreen(
 
         // App identity header
         Row(verticalAlignment = Alignment.CenterVertically) {
-            Image(
-                painter = painterResource(Res.drawable.logo_rutedu),
-                contentDescription = null,
-                modifier = Modifier
-                    .size(56.dp)
-                    .clip(RoundedCornerShape(14.dp)),
-                contentScale = ContentScale.Crop
-            )
-            Spacer(modifier = Modifier.width(14.dp))
             Column {
                 Text(
-                    text = "RUTEdu",
+                    text = "EduApp",
                     fontSize = 26.sp,
                     fontWeight = FontWeight.Bold,
                     color = MaterialTheme.colorScheme.onBackground
                 )
                 Text(
-                    text = stringResource(Res.string.fragment_menu_university),
+                    text = "juno.ka"),
                     fontSize = 13.sp,
                     fontWeight = FontWeight.SemiBold,
                     color = AccentOrange
@@ -135,26 +126,11 @@ fun MainScreen(
         Spacer(modifier = Modifier.weight(1f))
         Spacer(modifier = Modifier.height(32.dp))
 
-        // Institution footer: two symmetric cards of equal height (emblem + name inside).
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .height(IntrinsicSize.Max),
-            horizontalArrangement = Arrangement.spacedBy(12.dp)
-        ) {
-            InstitutionFooter(
-                emblem = Res.drawable.emblem_prz,
-                name = stringResource(Res.string.fragment_menu_university),
-                onClick = { uriHandler.openUri("https://prz.edu.pl/") },
-                modifier = Modifier.weight(1f).fillMaxHeight()
-            )
-            InstitutionFooter(
-                emblem = Res.drawable.emblem_weii,
-                name = stringResource(Res.string.weii_description),
-                onClick = { uriHandler.openUri("https://weii.prz.edu.pl/") },
-                modifier = Modifier.weight(1f).fillMaxHeight()
-            )
-        }
+        Text(
+            text = "Based on RUTEdu project (MIT Licensed)",
+            fontSize = 12.sp,
+            color = MaterialTheme.colorScheme.onSurfaceVariant
+        )
 
         Spacer(modifier = Modifier.height(20.dp))
     }
