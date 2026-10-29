@@ -92,7 +92,7 @@ fun MainScreen(
                     color = MaterialTheme.colorScheme.onBackground
                 )
                 Text(
-                    text = "juno.ka"),
+                    text = "juno.ka",
                     fontSize = 13.sp,
                     fontWeight = FontWeight.SemiBold,
                     color = AccentOrange
